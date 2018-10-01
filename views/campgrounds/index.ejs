@@ -1,0 +1,47 @@
+<% include ../partials/header %>
+
+
+
+<div class="container">
+  <header class="jumbotron">
+    <div class="container">
+      <h1>Welcome to YelpCamp</h1>
+      <p>View our hand-picked campgrounds from all over the world</p>
+      <p>
+        <a class="btn btn-primary btn-lg" href="/campgrounds/new">Add New Campground</a>
+      </p>
+    </div> <!--div header container-->
+  </header>
+  
+  <div class="row center-block text-center">
+    
+      <% campgrounds.forEach(function(campground){ %>
+      <div class="col-md-3 col-sm-6">
+          
+          <div class="img-thumbnail">
+              <img class="img-responsive" src="<%= campground.image %>">
+              
+              <div class="caption text-center">
+                  <h4><%= campground.name %></h4>
+                </div>
+                <p>
+                    <a href="/campgrounds/<%=campground._id%>" class="btn btn-primary">More Info</a>
+                </p>
+            </div>
+            
+      </div>
+      <% }); %>
+      
+  </div> <!--row-->
+
+</div> <!--container-->
+  
+<p></p>
+  <a href="/">Go back to Home</a>
+<p></p>
+<% include ../partials/footer %>
+
+
+
+
+ <!-- to test the data being passed through, use: <%=campgrounds%>-->
