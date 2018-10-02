@@ -6,16 +6,17 @@
         <div class="col-md-3">
             <p class="lead">YelpCamp</p>
             <div class="list-group">
-                <li class="list-group-item active">Info 1</li>
-                <li class="list-group-item">Info 2</li>
-                <li class="list-group-item">Info 3</li>
+                <% campground.forEach(function(campground){ %>
+                <li><a class="list-group-item" href="/campgrounds/<%- campground.id %>"><%= campground.name %></a></li>
+                <% )}; %>
             </div>
+            <a href="/campgrounds">>Back to Campgrounds</a>
         </div>
         
         
-        <div class="col-md-9 large-image">
+        <div class="col-md-9">
             <div class="img-thumbnail">
-                <img class="img-responsive" src="<%=campground.image%>">
+                <img class="img-responsive screen-width" src="<%=campground.image%>">
                 <div class="caption-full">
                     <h4 class="pull-right">$<%= campground.price %>/night</h4>
                     <h4><a><%=campground.name%></a></h4>
@@ -30,7 +31,8 @@
                     <% } %>
                 </div>
             </div>
-            <div class="well">
+            <p></p>
+            <div class="well screen-width">
                 <div class="text-right">
                     <a class="btn btn-success" href="/campgrounds/<%=campground._id%>/comments/new">Add New Comment</a>
                 </div>
@@ -62,18 +64,4 @@
     </div>
 </div>
   
-        
-        
-        
-   
-
-<p></p>
-
-
-
-<p></p>
-<p>
-    
-</p>
-<p></p>
 <% include ../partials/footer %>
