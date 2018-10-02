@@ -6,10 +6,10 @@
         <div class="col-md-3">
             <p class="lead">YelpCamp</p>
             <div class="list-group">
-                <% campground.forEach(function(campground){ %>
-                console.log(campground);
+                <li><% campground.forEach(function(campground){ %>
+               <% console.log(campground); %> 
                <!--  <li><a class="list-group-item" href="/campgrounds/<%- campground.id %>"><%= campground.name %></a></li> -->
-                <% )}; %>
+                <% )} %>
             </div>
             <a href="/campgrounds">>Back to Campgrounds</a>
         </div>
