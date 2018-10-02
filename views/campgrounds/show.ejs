@@ -7,7 +7,8 @@
             <p class="lead">YelpCamp</p>
             <div class="list-group">
                 <% campground.forEach(function(campground){ %>
-                <li><a class="list-group-item" href="/campgrounds/<%- campground.id %>"><%= campground.name %></a></li>
+                console.log(campground);
+               <!--  <li><a class="list-group-item" href="/campgrounds/<%- campground.id %>"><%= campground.name %></a></li> -->
                 <% )}; %>
             </div>
             <a href="/campgrounds">>Back to Campgrounds</a>
