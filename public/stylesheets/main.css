@@ -14,3 +14,7 @@
 #delete-form {
     display: inline;
 }
+
+.large-image {
+	width: 500px;
+}
