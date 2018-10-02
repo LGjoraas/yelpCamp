@@ -13,8 +13,8 @@ router.get("/", function(req, res){
         if(err){
             console.log(err);
         } else {
-            //first parameter in {} is referring to the db name
-            res.render("campgrounds/index", {campgrounds: allCampgrounds}); 
+        //first parameter in {} is referring to the db name
+            res.render("campgrounds/index", { campgrounds: allCampgrounds}); 
         }
     });
 });
